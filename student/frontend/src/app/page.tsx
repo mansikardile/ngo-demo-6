@@ -398,6 +398,17 @@ export default function StudentLandingPage() {
 
       {/* 1. HERO SECTION (HopeBridge Inspired with India Map Silhouette) */}
       <section className="relative overflow-hidden bg-[#fdfbf7] border-b border-slate-200/60 pt-16 sm:pt-20 pb-20 sm:pb-28 px-4 sm:px-8 w-full">
+        {/* Very Light Ambient Indian Heritage University Campus Background */}
+        <div className="absolute inset-0 pointer-events-none select-none z-0 overflow-hidden">
+          <img
+            src="/images/indian_heritage_campus_bg.jpg"
+            alt="Indian University Campus Background"
+            className="w-full h-full object-cover object-center opacity-[0.08] filter contrast-125"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#fdfbf7] via-[#fdfbf7]/70 to-[#fdfbf7]/90" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#fdfbf7] via-transparent to-[#fdfbf7]" />
+        </div>
+
         {/* Subtle Ambient Radial Glows */}
         <div className="absolute top-12 left-1/3 w-96 h-96 bg-amber-100/40 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-10 right-10 w-96 h-96 bg-rose-100/30 rounded-full blur-3xl pointer-events-none" />
