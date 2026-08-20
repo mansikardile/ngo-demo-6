@@ -398,16 +398,16 @@ export default function StudentLandingPage() {
 
       {/* 1. HERO SECTION (HopeBridge Inspired with India Map Silhouette) */}
       <section className="relative overflow-hidden bg-[#fdfbf7] border-b border-slate-200/60 pt-16 sm:pt-20 pb-20 sm:pb-28 px-4 sm:px-8 w-full">
-        {/* Ambient Indian Heritage University Campus Background */}
+        {/* Ambient Indian Heritage University Campus Background (Richer & More Prominent) */}
         <div className="absolute inset-0 pointer-events-none select-none z-0 overflow-hidden">
           <img
             src="/images/indian_heritage_campus_bg.jpg"
             alt="Indian University Campus Background"
-            className="w-full h-full object-cover object-center opacity-[0.24] filter contrast-110 brightness-105"
+            className="w-full h-full object-cover object-center opacity-[0.45] filter contrast-125 brightness-95 saturate-110"
           />
-          {/* Gentle left-side subtle fade so text remains razor sharp */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#fdfbf7] via-[#fdfbf7]/50 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#fdfbf7] via-transparent to-[#fdfbf7]/60" />
+          {/* Soft directional gradient mask to keep text ultra readable */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#fdfbf7] via-[#fdfbf7]/40 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#fdfbf7] via-transparent to-[#fdfbf7]/50" />
         </div>
 
         {/* Subtle Ambient Radial Glows */}
