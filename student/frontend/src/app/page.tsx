@@ -402,15 +402,6 @@ export default function StudentLandingPage() {
         <div className="absolute top-12 left-1/3 w-96 h-96 bg-amber-100/40 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-10 right-10 w-96 h-96 bg-rose-100/30 rounded-full blur-3xl pointer-events-none" />
 
-        {/* Hand-Drawn Halftone India Map Background Watermark */}
-        <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[680px] h-[780px] opacity-[0.055] pointer-events-none select-none z-0 mix-blend-multiply flex items-center justify-center overflow-hidden">
-          <img
-            src="/images/india_map_sketch_bg.png"
-            alt="India Map Watermark"
-            className="w-full h-full object-contain filter contrast-125 scale-110"
-          />
-        </div>
-
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center relative z-10">
           {/* Left Column: Editorial Headline, Subtitle, CTA Pills & Social Proof */}
           <ScrollReveal direction="up" distance={30} duration={1000} className="lg:col-span-7 space-y-7 sm:space-y-8">
