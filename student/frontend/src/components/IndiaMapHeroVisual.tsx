@@ -18,10 +18,10 @@ export default function IndiaMapHeroVisual() {
       {/* Subtle Glow Behind India Map */}
       <div className="absolute inset-0 bg-gradient-to-tr from-amber-200/30 via-emerald-200/20 to-indigo-200/20 rounded-full blur-3xl -z-10 pointer-events-none" />
 
-      {/* Main Container with Exact Uploaded Sketch Map Silhouette */}
-      <div className="relative w-full aspect-[918/1024] max-w-[480px] flex items-center justify-center filter drop-shadow-[0_20px_40px_rgba(0,0,0,0.14)] group">
+      {/* Main Container with Clean Uploaded Vector Outline Silhouette */}
+      <div className="relative w-full aspect-[507/552] max-w-[490px] flex items-center justify-center filter drop-shadow-[0_20px_40px_rgba(0,0,0,0.13)] group">
         <img
-          src="/images/india_scholars_in_sketch_map.png"
+          src="/images/india_scholars_clean_map.png"
           alt="Katalyst Indian STEM Scholars inside India Map"
           className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700 origin-center"
         />
