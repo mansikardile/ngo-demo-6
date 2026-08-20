@@ -167,43 +167,52 @@ export default function StudentSignupPage() {
   };
 
   return (
-    <div className="min-h-screen w-full flex items-center justify-center p-4 sm:p-8 bg-slate-100/70">
+    <div className="min-h-screen w-full flex items-center justify-center p-4 sm:p-8 bg-[#fdfbf7] relative overflow-hidden">
+      {/* Ambient Glows */}
+      <div className="absolute top-10 left-10 w-96 h-96 bg-amber-100/50 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-10 right-10 w-96 h-96 bg-emerald-100/40 rounded-full blur-3xl pointer-events-none" />
+
       {/* Main Split Card */}
-      <div className="w-full max-w-5xl bg-white rounded-3xl shadow-2xl border border-slate-200/80 overflow-hidden grid grid-cols-1 lg:grid-cols-12 min-h-[640px]">
+      <div className="w-full max-w-5xl bg-white rounded-[32px] shadow-[0_20px_60px_-15px_rgba(0,0,0,0.08)] border border-slate-200/80 overflow-hidden grid grid-cols-1 lg:grid-cols-12 min-h-[660px] relative z-10">
         {/* Left Side: Form Container */}
         <div className="lg:col-span-6 p-8 sm:p-12 flex flex-col justify-between">
           <div>
             {/* Top Brand Logo */}
-            <Link href="/" className="inline-flex items-center gap-2.5 mb-6 group">
-              <div className="w-8 h-8 rounded-xl bg-gradient-to-tr from-rose-500 to-indigo-600 flex items-center justify-center text-white font-extrabold text-sm shadow-sm">
+            <Link href="/" className="inline-flex items-center gap-2.5 mb-7 group">
+              <div className="w-9 h-9 rounded-full bg-[#153e2e] flex items-center justify-center text-white font-extrabold text-sm shadow-md">
                 K
               </div>
               <span className="text-base font-extrabold text-slate-900 tracking-tight">
-                Katalyst
+                Katalyst India
               </span>
             </Link>
 
             {/* Header */}
             <div className="mb-6">
-              <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mb-1">
-                Student Sign Up
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 text-[11px] font-bold border border-emerald-200/70 mb-2">
+                <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
+                <span>Fellowship Registration</span>
+              </div>
+              <h1 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight leading-tight mb-2">
+                Create Account.<br />
+                <span className="font-editorial italic font-normal text-[#ea580c]">Join</span> 4,500+ Scholars.
               </h1>
-              <p className="text-xs text-slate-500">
-                Create an account to attend Katalyst sessions and apply for STEM scholarships.
+              <p className="text-xs text-slate-500 font-normal leading-relaxed">
+                Register to apply for full STEM fellowships, laptop grants, and 1:1 mentorship.
               </p>
             </div>
 
             {/* Server Feedback Alerts */}
             {serverError && (
-              <div className="mb-4 p-3 rounded-xl bg-rose-50 border border-rose-200 text-rose-700 text-xs flex items-center gap-2">
+              <div className="mb-4 p-3.5 rounded-2xl bg-rose-50 border border-rose-200 text-rose-700 text-xs flex items-center gap-2">
                 <AlertCircle className="w-4 h-4 shrink-0" />
                 <span>{serverError}</span>
               </div>
             )}
 
             {successMessage && (
-              <div className="mb-4 p-3 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 shrink-0" />
+              <div className="mb-4 p-3.5 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs flex items-center gap-2 font-medium">
+                <CheckCircle2 className="w-4 h-4 shrink-0 text-emerald-600" />
                 <span>{successMessage}</span>
               </div>
             )}
@@ -230,11 +239,11 @@ export default function StudentSignupPage() {
 
             {/* Divider */}
             <div className="relative flex items-center justify-center mb-5">
-              <div className="border-t border-slate-200 w-full" />
-              <span className="bg-white px-3 text-[11px] text-slate-400 font-medium uppercase">
+              <div className="border-t border-slate-200/80 w-full" />
+              <span className="bg-white px-3 text-[11px] text-slate-400 font-medium tracking-wider uppercase">
                 or sign up with email
               </span>
-              <div className="border-t border-slate-200 w-full" />
+              <div className="border-t border-slate-200/80 w-full" />
             </div>
 
             {/* Email / Password Form */}
@@ -245,12 +254,12 @@ export default function StudentSignupPage() {
                   Full Name *
                 </label>
                 <div className="relative">
-                  <User className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
+                  <User className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
                   <input
                     type="text"
                     placeholder="e.g. Priya Sharma"
                     {...register('fullName')}
-                    className="w-full pl-9 pr-3 py-2 text-xs rounded-xl input-field outline-none"
+                    className="w-full pl-10 pr-3.5 py-2.5 text-xs rounded-xl border border-slate-200 bg-slate-50/50 focus:bg-white focus:border-emerald-600 focus:ring-2 focus:ring-emerald-600/20 outline-none transition-all"
                   />
                 </div>
                 {errors.fullName && (
@@ -273,17 +282,17 @@ export default function StudentSignupPage() {
                     </span>
                   ) : isEduDomain ? (
                     <span className="text-[10px] font-medium text-amber-700 bg-amber-50 px-2 py-0.5 rounded-full">
-                      .edu domain (Pending verification)
+                      .edu domain (Verified)
                     </span>
                   ) : null}
                 </div>
                 <div className="relative">
-                  <Mail className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
+                  <Mail className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
                   <input
                     type="email"
                     placeholder="name@college.edu or name@gmail.com"
                     {...register('email')}
-                    className="w-full pl-9 pr-3 py-2 text-xs rounded-xl input-field outline-none"
+                    className="w-full pl-10 pr-3.5 py-2.5 text-xs rounded-xl border border-slate-200 bg-slate-50/50 focus:bg-white focus:border-emerald-600 focus:ring-2 focus:ring-emerald-600/20 outline-none transition-all"
                   />
                 </div>
                 {errors.email && (
@@ -299,12 +308,12 @@ export default function StudentSignupPage() {
                   College / University Name *
                 </label>
                 <div className="relative">
-                  <Building2 className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
+                  <Building2 className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
                   <input
                     type="text"
                     placeholder="e.g. COEP Pune / VJTI / PICT"
                     {...register('collegeName')}
-                    className="w-full pl-9 pr-3 py-2 text-xs rounded-xl input-field outline-none"
+                    className="w-full pl-10 pr-3.5 py-2.5 text-xs rounded-xl border border-slate-200 bg-slate-50/50 focus:bg-white focus:border-emerald-600 focus:ring-2 focus:ring-emerald-600/20 outline-none transition-all"
                   />
                 </div>
                 {errors.collegeName && (
@@ -320,17 +329,17 @@ export default function StudentSignupPage() {
                   Create Password *
                 </label>
                 <div className="relative">
-                  <Lock className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
+                  <Lock className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
                   <input
                     type={showPassword ? 'text' : 'password'}
                     placeholder="Min 6 characters"
                     {...register('password')}
-                    className="w-full pl-9 pr-10 py-2 text-xs rounded-xl input-field outline-none"
+                    className="w-full pl-10 pr-10 py-2.5 text-xs rounded-xl border border-slate-200 bg-slate-50/50 focus:bg-white focus:border-emerald-600 focus:ring-2 focus:ring-emerald-600/20 outline-none transition-all"
                   />
                   <button
                     type="button"
                     onClick={() => setShowPassword(!showPassword)}
-                    className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600"
+                    className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 p-1"
                   >
                     {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
                   </button>
@@ -346,17 +355,17 @@ export default function StudentSignupPage() {
               <button
                 type="submit"
                 disabled={signupMutation.isPending}
-                className="w-full mt-2 py-3 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs shadow-md transition-all flex items-center justify-center gap-2 disabled:opacity-50"
+                className="w-full mt-2 py-3.5 px-5 rounded-full bg-[#153e2e] hover:bg-[#0e2c20] active:bg-[#081a13] text-white font-bold text-xs sm:text-sm shadow-md transition-all flex items-center justify-center gap-2 disabled:opacity-50 cursor-pointer"
               >
                 {signupMutation.isPending ? (
                   <>
-                    <div className="w-3.5 h-3.5 border-2 border-white/40 border-t-white rounded-full animate-spin" />
+                    <div className="w-4 h-4 border-2 border-white/40 border-t-white rounded-full animate-spin" />
                     <span>Creating account...</span>
                   </>
                 ) : (
                   <>
                     <span>Create Student Account</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
+                    <ArrowRight className="w-4 h-4" />
                   </>
                 )}
               </button>
@@ -364,52 +373,67 @@ export default function StudentSignupPage() {
           </div>
 
           {/* Footer switch */}
-          <div className="mt-6 text-center text-xs text-slate-500">
+          <div className="mt-7 pt-3 border-t border-slate-100 text-center text-xs text-slate-500">
             Already have an account?{' '}
-            <Link href="/login" className="font-bold text-rose-600 hover:underline">
+            <Link href="/login" className="font-bold text-[#ea580c] hover:underline">
               Log in here
             </Link>
           </div>
         </div>
 
         {/* Right Side: Inspiring STEM Visual Showcase */}
-        <div className="hidden lg:flex lg:col-span-6 bg-gradient-to-br from-indigo-950 via-slate-900 to-rose-950 p-10 text-white flex-col justify-between relative overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(244,63,94,0.25)_0%,transparent_50%)] pointer-events-none" />
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="hidden lg:flex lg:col-span-6 bg-[#153e2e] p-10 text-white flex-col justify-between relative overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(234,88,12,0.18)_0%,transparent_50%)] pointer-events-none" />
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
 
           <div className="relative z-10">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md text-rose-300 text-xs font-semibold mb-6">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md text-emerald-300 text-xs font-semibold mb-6 border border-white/10">
               <Sparkles className="w-3.5 h-3.5" />
-              <span>Katalyst Scholar Community</span>
+              <span>Building Hope • Katalyst Scholar Community</span>
             </div>
             <h2 className="text-3xl font-black tracking-tight leading-snug">
-              Transform your STEM journey with India's premier women mentorship initiative.
+              Transform Your STEM Journey.<br />
+              <span className="font-editorial italic font-normal text-amber-300">Empowering</span> India's Next Generation of Women in Tech.
             </h2>
           </div>
 
-          <div className="relative z-10 my-8 p-6 rounded-2xl bg-white/10 backdrop-blur-md border border-white/15">
-            <p className="text-xs text-slate-200 leading-relaxed italic mb-4">
+          {/* Center Image Showcase */}
+          <div className="relative z-10 my-6 rounded-2xl overflow-hidden border-2 border-white/20 shadow-2xl group">
+            <img
+              src="/images/indian_scholars_hero.jpg"
+              alt="Indian STEM Scholars"
+              className="w-full h-44 object-cover group-hover:scale-105 transition-transform duration-700"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0e2c20]/90 via-[#0e2c20]/20 to-transparent" />
+            <div className="absolute bottom-3 left-4 right-4 text-xs font-bold text-white flex items-center justify-between">
+              <span>Full Engineering Scholarship Fellowship</span>
+              <span className="px-2 py-0.5 rounded-full bg-emerald-500/30 text-[10px] text-emerald-200 border border-emerald-400/40">4-Year Grant</span>
+            </div>
+          </div>
+
+          <div className="relative z-10 p-5 rounded-2xl bg-white/10 backdrop-blur-md border border-white/15">
+            <p className="text-xs text-slate-100 leading-relaxed italic mb-3">
               "Katalyst paired me with an Engineering VP who guided my coding roadmap every month. Today, I work as a Cloud Architect. Any young woman in engineering can achieve this."
             </p>
             <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-full bg-gradient-to-tr from-rose-400 to-indigo-400 flex items-center justify-center font-bold text-sm text-slate-900">
+              <div className="w-8 h-8 rounded-full bg-amber-400 flex items-center justify-center font-bold text-xs text-slate-900">
                 A
               </div>
               <div>
                 <p className="text-xs font-bold text-white">Ananya Kulkarni</p>
-                <p className="text-[10px] text-rose-300">Katalyst Alumna &bull; COEP Pune</p>
+                <p className="text-[10px] text-emerald-300">Katalyst Alumna &bull; COEP Pune</p>
               </div>
             </div>
           </div>
 
-          <div className="relative z-10 space-y-2 text-xs text-slate-300 font-medium">
+          <div className="relative z-10 space-y-2 text-xs text-emerald-100 font-medium">
             <div className="flex items-center gap-2">
               <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-              <span>Full scholarship & 1:1 corporate mentorship</span>
+              <span>Full scholarship &amp; 1:1 corporate mentorship</span>
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-              <span>Free laptop distribution for coding & projects</span>
+              <span>Free laptop distribution for coding &amp; projects</span>
             </div>
           </div>
         </div>

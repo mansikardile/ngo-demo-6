@@ -85,59 +85,60 @@ export default function AdminLoginPage() {
   };
 
   return (
-    <main className="relative min-h-screen w-full flex flex-col items-center justify-center p-4 sm:p-6 sky-bg">
-      {/* Background ambient lighting/clouds design */}
+    <main className="relative min-h-screen w-full flex flex-col items-center justify-center p-4 sm:p-6 bg-[#fdfbf7] overflow-hidden">
+      {/* Background ambient lighting */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-[20%] left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-gradient-to-b from-white/80 to-transparent rounded-full blur-3xl" />
-        <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-white/90 to-transparent" />
+        <div className="absolute top-10 left-1/4 w-96 h-96 bg-amber-100/50 rounded-full blur-3xl" />
+        <div className="absolute bottom-10 right-1/4 w-96 h-96 bg-emerald-100/40 rounded-full blur-3xl" />
       </div>
 
       {/* Top Header / Branding */}
       <header className="absolute top-6 left-6 sm:top-8 sm:left-10 z-10 flex items-center gap-2.5">
-        <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-sky-600 to-indigo-600 flex items-center justify-center shadow-md shadow-sky-500/20 text-white font-bold text-lg">
+        <div className="w-9 h-9 rounded-full bg-[#153e2e] flex items-center justify-center shadow-md text-white font-bold text-base">
           K
         </div>
         <div className="flex flex-col">
-          <span className="text-base font-extrabold tracking-tight text-slate-800">
-            Katalyst
+          <span className="text-base font-extrabold tracking-tight text-slate-900">
+            Katalyst India
           </span>
-          <span className="text-[10px] font-semibold text-sky-700 tracking-wider uppercase">
-            STEM Outreach &bull; Admin
+          <span className="text-[10px] font-bold text-emerald-800 tracking-wider uppercase">
+            Outreach Command &bull; Admin
           </span>
         </div>
       </header>
 
-      {/* Center Glassmorphic Login Card */}
-      <div className="relative z-10 w-full max-w-[420px] rounded-3xl glass-panel p-8 sm:p-9 transition-all duration-300">
+      {/* Center HopeBridge Card */}
+      <div className="relative z-10 w-full max-w-[440px] rounded-[32px] bg-white p-8 sm:p-10 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.08)] border border-slate-200/80 transition-all duration-300">
         {/* Top Icon Badge */}
         <div className="flex justify-center mb-5">
-          <div className="w-14 h-14 rounded-2xl bg-white shadow-sm border border-slate-100 flex items-center justify-center text-slate-700 transition-transform duration-300 hover:scale-105">
-            <LogIn className="w-6 h-6 text-slate-700" />
+          <div className="w-14 h-14 rounded-2xl bg-emerald-50 border border-emerald-200/60 flex items-center justify-center text-[#153e2e] shadow-sm">
+            <ShieldCheck className="w-7 h-7 text-[#153e2e]" />
           </div>
         </div>
 
         {/* Title & Description */}
         <div className="text-center mb-7">
-          <h1 className="text-2xl font-bold text-slate-900 tracking-tight mb-1.5">
-            Sign in with email
+          <h1 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight mb-1.5">
+            Admin Portal.<br />
+            <span className="font-editorial italic font-normal text-[#ea580c]">Executive</span> Sign In.
           </h1>
-          <p className="text-xs sm:text-sm text-slate-500 max-w-[280px] mx-auto leading-relaxed">
-            Admin access to track student outreach, events, and conversion funnels.
+          <p className="text-xs text-slate-500 max-w-[290px] mx-auto leading-relaxed">
+            Manage student evaluation dossiers, campus drives, email dispatches, and funnel analytics.
           </p>
         </div>
 
         {/* Feedback Alert Messages */}
         {authError && (
-          <div className="mb-5 p-3.5 rounded-xl bg-rose-50 border border-rose-200/80 flex items-start gap-2.5 text-rose-700 text-xs sm:text-sm animate-in fade-in slide-in-from-top-1 duration-200">
+          <div className="mb-5 p-3.5 rounded-2xl bg-rose-50 border border-rose-200 flex items-start gap-2.5 text-rose-700 text-xs animate-in fade-in">
             <AlertCircle className="w-4 h-4 mt-0.5 shrink-0" />
             <span className="font-medium leading-snug">{authError}</span>
           </div>
         )}
 
         {isSuccess && (
-          <div className="mb-5 p-3.5 rounded-xl bg-emerald-50 border border-emerald-200/80 flex items-center gap-2.5 text-emerald-700 text-xs sm:text-sm animate-in fade-in slide-in-from-top-1 duration-200">
-            <CheckCircle2 className="w-4 h-4 shrink-0" />
-            <span className="font-semibold">Authentication successful! Redirecting...</span>
+          <div className="mb-5 p-3.5 rounded-2xl bg-emerald-50 border border-emerald-200 flex items-center gap-2.5 text-emerald-800 text-xs animate-in fade-in font-medium">
+            <CheckCircle2 className="w-4 h-4 shrink-0 text-emerald-600" />
+            <span>Authentication successful! Redirecting to Command Center...</span>
           </div>
         )}
 
@@ -145,6 +146,9 @@ export default function AdminLoginPage() {
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
           {/* Email Input */}
           <div>
+            <label className="block text-[11px] font-bold text-slate-700 mb-1.5">
+              Admin Email
+            </label>
             <div className="relative flex items-center">
               <span className="absolute left-3.5 text-slate-400">
                 <Mail className="w-4 h-4" />
@@ -152,16 +156,16 @@ export default function AdminLoginPage() {
               <input
                 id="admin-email"
                 type="email"
-                placeholder="Email"
+                placeholder="admin@katalyst.org"
                 autoComplete="email"
                 {...register('email')}
-                className={`w-full pl-10 pr-4 py-3 text-sm rounded-xl glass-input text-slate-900 placeholder:text-slate-400 outline-none ${
+                className={`w-full pl-10 pr-4 py-3 text-xs rounded-xl border border-slate-200 bg-slate-50/50 focus:bg-white focus:border-emerald-600 focus:ring-2 focus:ring-emerald-600/20 text-slate-900 placeholder:text-slate-400 outline-none transition-all ${
                   errors.email ? '!border-rose-400 !bg-rose-50/50' : ''
                 }`}
               />
             </div>
             {errors.email && (
-              <p className="mt-1.5 text-xs text-rose-600 pl-1 font-medium">
+              <p className="mt-1.5 text-[10px] text-rose-600 pl-1 font-medium">
                 {errors.email.message}
               </p>
             )}
@@ -169,6 +173,9 @@ export default function AdminLoginPage() {
 
           {/* Password Input */}
           <div>
+            <label className="block text-[11px] font-bold text-slate-700 mb-1.5">
+              Password
+            </label>
             <div className="relative flex items-center">
               <span className="absolute left-3.5 text-slate-400">
                 <Lock className="w-4 h-4" />
@@ -176,17 +183,17 @@ export default function AdminLoginPage() {
               <input
                 id="admin-password"
                 type={showPassword ? 'text' : 'password'}
-                placeholder="Password"
+                placeholder="••••••••"
                 autoComplete="current-password"
                 {...register('password')}
-                className={`w-full pl-10 pr-11 py-3 text-sm rounded-xl glass-input text-slate-900 placeholder:text-slate-400 outline-none ${
+                className={`w-full pl-10 pr-11 py-3 text-xs rounded-xl border border-slate-200 bg-slate-50/50 focus:bg-white focus:border-emerald-600 focus:ring-2 focus:ring-emerald-600/20 text-slate-900 placeholder:text-slate-400 outline-none transition-all ${
                   errors.password ? '!border-rose-400 !bg-rose-50/50' : ''
                 }`}
               />
               <button
                 type="button"
                 onClick={() => setShowPassword(!showPassword)}
-                className="absolute right-3.5 text-slate-400 hover:text-slate-600 focus:outline-none p-0.5"
+                className="absolute right-3.5 text-slate-400 hover:text-slate-600 focus:outline-none p-1"
                 tabIndex={-1}
                 aria-label={showPassword ? 'Hide password' : 'Show password'}
               >
@@ -198,18 +205,19 @@ export default function AdminLoginPage() {
               </button>
             </div>
             {errors.password && (
-              <p className="mt-1.5 text-xs text-rose-600 pl-1 font-medium">
+              <p className="mt-1.5 text-[10px] text-rose-600 pl-1 font-medium">
                 {errors.password.message}
               </p>
             )}
           </div>
 
           {/* Helper / Info */}
-          <div className="flex items-center justify-end pt-1">
-            <span className="text-[11px] text-slate-400 flex items-center gap-1">
-              <ShieldCheck className="w-3 h-3 text-slate-400" />
-              Encrypted Session
+          <div className="flex items-center justify-between pt-1 text-[11px] text-slate-400">
+            <span className="flex items-center gap-1">
+              <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
+              256-Bit SSL Encrypted
             </span>
+            <span>Role: Executive</span>
           </div>
 
           {/* Submit Button */}
@@ -217,7 +225,7 @@ export default function AdminLoginPage() {
             id="login-submit-btn"
             type="submit"
             disabled={loginMutation.isPending || isSuccess}
-            className="w-full mt-2 py-3 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 active:bg-slate-950 text-white font-medium text-sm transition-all duration-200 shadow-md hover:shadow-lg disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2 group"
+            className="w-full mt-2 py-3.5 px-5 rounded-full bg-[#153e2e] hover:bg-[#0e2c20] active:bg-[#081a13] text-white font-bold text-xs sm:text-sm shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 disabled:opacity-70 cursor-pointer"
           >
             {loginMutation.isPending ? (
               <>
@@ -226,25 +234,25 @@ export default function AdminLoginPage() {
               </>
             ) : isSuccess ? (
               <>
-                <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-                <span>Welcome back</span>
+                <CheckCircle2 className="w-4 h-4 text-emerald-300" />
+                <span>Redirecting...</span>
               </>
             ) : (
-              <span>Get Started</span>
+              <span>Sign In to Command Center</span>
             )}
           </button>
         </form>
 
         {/* Database Connected Status Footer Badge */}
-        <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-center gap-1.5 text-[11px] text-slate-400">
-          <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+        <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-center gap-2 text-[11px] text-slate-400">
+          <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
           <span>Connected to Supabase PostgreSQL</span>
         </div>
       </div>
 
       {/* Footer Info */}
       <footer className="relative z-10 mt-8 text-center text-xs text-slate-500 font-medium">
-        Katalyst India &copy; 2025 &bull; Empowering Young Women in STEM
+        Katalyst India &bull; Building Hope &bull; Creating Change &bull; Transforming Lives
       </footer>
     </main>
   );
