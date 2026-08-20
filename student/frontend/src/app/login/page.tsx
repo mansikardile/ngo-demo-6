@@ -130,7 +130,6 @@ export default function StudentLoginPage() {
   };
 
   return (
-  return (
     <div className="min-h-screen w-full flex items-center justify-center p-4 sm:p-8 bg-[#fdfbf7] relative overflow-hidden">
       {/* Subtle Ambient Radial Glows */}
       <div className="absolute top-10 left-10 w-96 h-96 bg-amber-100/50 rounded-full blur-3xl pointer-events-none" />
