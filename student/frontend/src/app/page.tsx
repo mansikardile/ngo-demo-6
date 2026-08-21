@@ -10,7 +10,7 @@ import ScrollReveal from '@/components/ScrollReveal';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 import DigitalSignaturePad from '@/components/DigitalSignaturePad';
 import IndiaMapHeroVisual from '@/components/IndiaMapHeroVisual';
-import Spline3DExperience from '@/components/Spline3DExperience';
+import Interactive3DCard from '@/components/Interactive3DCard';
 import { Language, translations } from '@/lib/translations';
 import {
   getOfflineQueue,
@@ -624,80 +624,92 @@ export default function StudentLandingPage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Card 1 */}
           <ScrollReveal direction="up" distance={40} delay={100} duration={1100}>
-            <div className="rounded-3xl bg-white border border-slate-200/80 shadow-sm hover-lift overflow-hidden flex flex-col justify-between h-full">
-              <div className="h-48 overflow-hidden relative">
-                <img
-                  src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&auto=format&fit=crop&q=80"
-                  alt="Young female student coding with laptop"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-rose-600 text-white text-[10px] font-extrabold shadow-sm">
-                  {t.prog1Tag}
+            <Interactive3DCard className="h-full rounded-3xl" maxTilt={10}>
+              <div className="rounded-3xl bg-white border border-slate-200/80 shadow-md hover:shadow-xl overflow-hidden flex flex-col justify-between h-full transition-shadow duration-300">
+                <div className="h-48 overflow-hidden relative">
+                  <img
+                    src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&auto=format&fit=crop&q=80"
+                    alt="Young female student coding with laptop"
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  />
+                  <div
+                    style={{ transform: 'translateZ(30px)' }}
+                    className="absolute top-3 left-3 px-3 py-1.5 rounded-full bg-rose-600 text-white text-[10px] font-extrabold shadow-lg [transform-style:preserve-3d]"
+                  >
+                    {t.prog1Tag}
+                  </div>
+                </div>
+                <div className="p-6 space-y-2">
+                  <h3 className="text-base font-extrabold text-slate-900">
+                    {t.prog1Title}
+                  </h3>
+                  <p className="text-xs text-slate-500 leading-relaxed">
+                    {t.prog1Desc}
+                  </p>
                 </div>
               </div>
-              <div className="p-6 space-y-2">
-                <h3 className="text-base font-extrabold text-slate-900">
-                  {t.prog1Title}
-                </h3>
-                <p className="text-xs text-slate-500 leading-relaxed">
-                  {t.prog1Desc}
-                </p>
-              </div>
-            </div>
+            </Interactive3DCard>
           </ScrollReveal>
 
           {/* Card 2 */}
           <ScrollReveal direction="up" distance={40} delay={200} duration={1100}>
-            <div className="rounded-3xl bg-white border border-slate-200/80 shadow-sm hover-lift overflow-hidden flex flex-col justify-between h-full">
-              <div className="h-48 overflow-hidden relative">
-                <img
-                  src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=800&auto=format&fit=crop&q=80"
-                  alt="Senior woman technology director mentoring young female engineer"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-indigo-600 text-white text-[10px] font-extrabold shadow-sm">
-                  {t.prog2Tag}
+            <Interactive3DCard className="h-full rounded-3xl" maxTilt={10}>
+              <div className="rounded-3xl bg-white border border-slate-200/80 shadow-md hover:shadow-xl overflow-hidden flex flex-col justify-between h-full transition-shadow duration-300">
+                <div className="h-48 overflow-hidden relative">
+                  <img
+                    src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=800&auto=format&fit=crop&q=80"
+                    alt="Senior woman technology director mentoring young female engineer"
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  />
+                  <div
+                    style={{ transform: 'translateZ(30px)' }}
+                    className="absolute top-3 left-3 px-3 py-1.5 rounded-full bg-indigo-600 text-white text-[10px] font-extrabold shadow-lg [transform-style:preserve-3d]"
+                  >
+                    {t.prog2Tag}
+                  </div>
+                </div>
+                <div className="p-6 space-y-2">
+                  <h3 className="text-base font-extrabold text-slate-900">
+                    {t.prog2Title}
+                  </h3>
+                  <p className="text-xs text-slate-500 leading-relaxed">
+                    {t.prog2Desc}
+                  </p>
                 </div>
               </div>
-              <div className="p-6 space-y-2">
-                <h3 className="text-base font-extrabold text-slate-900">
-                  {t.prog2Title}
-                </h3>
-                <p className="text-xs text-slate-500 leading-relaxed">
-                  {t.prog2Desc}
-                </p>
-              </div>
-            </div>
+            </Interactive3DCard>
           </ScrollReveal>
 
           {/* Card 3 */}
           <ScrollReveal direction="up" distance={40} delay={300} duration={1100}>
-            <div className="rounded-3xl bg-white border border-slate-200/80 shadow-sm hover-lift overflow-hidden flex flex-col justify-between h-full">
-              <div className="h-48 overflow-hidden relative">
-                <img
-                  src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800&auto=format&fit=crop&q=80"
-                  alt="Group of young female engineering scholars learning in tech lab"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-pink-600 text-white text-[10px] font-extrabold shadow-sm">
-                  {t.prog3Tag}
+            <Interactive3DCard className="h-full rounded-3xl" maxTilt={10}>
+              <div className="rounded-3xl bg-white border border-slate-200/80 shadow-md hover:shadow-xl overflow-hidden flex flex-col justify-between h-full transition-shadow duration-300">
+                <div className="h-48 overflow-hidden relative">
+                  <img
+                    src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800&auto=format&fit=crop&q=80"
+                    alt="Group of young female engineering scholars learning in tech lab"
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  />
+                  <div
+                    style={{ transform: 'translateZ(30px)' }}
+                    className="absolute top-3 left-3 px-3 py-1.5 rounded-full bg-pink-600 text-white text-[10px] font-extrabold shadow-lg [transform-style:preserve-3d]"
+                  >
+                    {t.prog3Tag}
+                  </div>
+                </div>
+                <div className="p-6 space-y-2">
+                  <h3 className="text-base font-extrabold text-slate-900">
+                    {t.prog3Title}
+                  </h3>
+                  <p className="text-xs text-slate-500 leading-relaxed">
+                    {t.prog3Desc}
+                  </p>
                 </div>
               </div>
-              <div className="p-6 space-y-2">
-                <h3 className="text-base font-extrabold text-slate-900">
-                  {t.prog3Title}
-                </h3>
-                <p className="text-xs text-slate-500 leading-relaxed">
-                  {t.prog3Desc}
-                </p>
-              </div>
-            </div>
+            </Interactive3DCard>
           </ScrollReveal>
         </div>
       </section>
-
-      {/* 4.5. INTERACTIVE 3D SPATIAL SANDBOX (Spline 3D) */}
-      <Spline3DExperience />
 
       {/* 5. CAMPUS DRIVES */}
       <section id="sessions" className="bg-slate-100/70 border-y border-slate-200/80 py-24 px-4 sm:px-8 w-full">
