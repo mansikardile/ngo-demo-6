@@ -3,6 +3,8 @@ import './globals.css';
 import QueryProvider from '@/lib/query-provider';
 import GoogleAuthProvider from '@/lib/google-auth-provider';
 
+import SmoothScrollProvider from '@/components/SmoothScrollProvider';
+
 export const metadata: Metadata = {
   title: 'Katalyst | Empowering Young Women in STEM',
   description:
@@ -21,7 +23,9 @@ export default function RootLayout({
     <html lang="en">
       <body className="antialiased min-h-screen bg-slate-50 text-slate-900">
         <GoogleAuthProvider>
-          <QueryProvider>{children}</QueryProvider>
+          <QueryProvider>
+            <SmoothScrollProvider>{children}</SmoothScrollProvider>
+          </QueryProvider>
         </GoogleAuthProvider>
       </body>
     </html>

@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import './globals.css';
 import QueryProvider from '@/lib/query-provider';
 
+import SmoothScrollProvider from '@/components/SmoothScrollProvider';
+
 export const metadata: Metadata = {
   title: 'Katalyst | Student Outreach & Application Tracking System',
   description:
@@ -19,7 +21,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased min-h-screen bg-slate-50">
-        <QueryProvider>{children}</QueryProvider>
+        <QueryProvider>
+          <SmoothScrollProvider>{children}</SmoothScrollProvider>
+        </QueryProvider>
       </body>
     </html>
   );
