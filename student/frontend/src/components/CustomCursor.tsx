@@ -90,8 +90,8 @@ export default function CustomCursor() {
         }}
         className={`fixed top-0 left-0 w-2.5 h-2.5 rounded-full transition-transform duration-75 ease-out shadow-sm pointer-events-none ${
           isHovered
-            ? 'bg-[#ea580c] shadow-[0_0_12px_rgba(234,88,12,0.8)]'
-            : 'bg-emerald-600 shadow-[0_0_8px_rgba(5,150,105,0.6)]'
+            ? 'bg-sky-400 shadow-[0_0_14px_rgba(56,189,248,0.9)]'
+            : 'bg-blue-600 shadow-[0_0_8px_rgba(37,99,235,0.7)]'
         }`}
       />
 
@@ -104,8 +104,8 @@ export default function CustomCursor() {
         }}
         className={`fixed top-0 left-0 rounded-full transition-all duration-300 ease-out pointer-events-none flex items-center justify-center ${
           isHovered
-            ? 'w-11 h-11 border-2 border-[#ea580c]/60 bg-[#ea580c]/10 backdrop-blur-[0.5px]'
-            : 'w-8 h-8 border border-emerald-600/40 bg-emerald-500/5'
+            ? 'w-11 h-11 border-2 border-sky-400/70 bg-sky-400/15 backdrop-blur-[0.5px]'
+            : 'w-8 h-8 border border-blue-600/40 bg-blue-500/5'
         }`}
       >
         {cursorText && (

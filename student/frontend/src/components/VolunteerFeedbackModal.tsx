@@ -101,7 +101,7 @@ export default function VolunteerFeedbackModal({
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/70 backdrop-blur-md overflow-y-auto animate-fade-in">
       <div className="relative w-full max-w-xl bg-white rounded-[32px] shadow-2xl border border-slate-200 overflow-hidden my-8">
         {/* Header Ribbon */}
-        <div className="p-6 sm:p-8 bg-gradient-to-r from-[#153e2e] via-emerald-900 to-[#0e2c20] text-white relative">
+        <div className="p-6 sm:p-8 bg-gradient-to-r from-[#0f2b5c] via-blue-900 to-[#091b3b] text-white relative">
           <button
             onClick={onClose}
             className="absolute top-6 right-6 p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
@@ -109,15 +109,15 @@ export default function VolunteerFeedbackModal({
             <X className="w-5 h-5" />
           </button>
 
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/15 text-emerald-200 text-xs font-bold mb-3 border border-white/10">
-            <Sparkles className="w-3.5 h-3.5 text-amber-300" />
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/15 text-sky-200 text-xs font-bold mb-3 border border-white/10">
+            <Sparkles className="w-3.5 h-3.5 text-sky-300" />
             <span>SevaSahayog Volunteer Experience</span>
           </div>
 
           <h2 className="text-2xl sm:text-3xl font-black text-white leading-tight">
             {t.modalTitle}
           </h2>
-          <p className="text-xs sm:text-sm text-emerald-100/90 mt-1">
+          <p className="text-xs sm:text-sm text-sky-100/90 mt-1">
             {t.modalSub}
           </p>
         </div>
@@ -134,7 +134,7 @@ export default function VolunteerFeedbackModal({
                 <select
                   value={activityCode}
                   onChange={(e) => setActivityCode(e.target.value)}
-                  className="w-full px-4 py-3 rounded-2xl border border-slate-200 bg-slate-50 text-xs font-semibold text-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-600/30 focus:border-emerald-600"
+                  className="w-full px-4 py-3 rounded-2xl border border-slate-200 bg-slate-50 text-xs font-semibold text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-600/30 focus:border-blue-600"
                   required
                 >
                   {SAMPLE_ACTIVITIES.map((act) => (
@@ -149,7 +149,7 @@ export default function VolunteerFeedbackModal({
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-1.5">
                   <label className="text-xs font-bold text-slate-700 flex items-center gap-1">
-                    <User className="w-3.5 h-3.5 text-emerald-700" />
+                    <User className="w-3.5 h-3.5 text-blue-700" />
                     <span>{t.modalName}</span>
                   </label>
                   <input
@@ -157,14 +157,14 @@ export default function VolunteerFeedbackModal({
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     placeholder="e.g. Mansi Kardile"
-                    className="w-full px-4 py-2.5 rounded-2xl border border-slate-200 bg-white text-xs font-semibold text-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-600/30 focus:border-emerald-600"
+                    className="w-full px-4 py-2.5 rounded-2xl border border-slate-200 bg-white text-xs font-semibold text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-600/30 focus:border-blue-600"
                     required
                   />
                 </div>
 
                 <div className="space-y-1.5">
                   <label className="text-xs font-bold text-slate-700 flex items-center gap-1">
-                    <Mail className="w-3.5 h-3.5 text-emerald-700" />
+                    <Mail className="w-3.5 h-3.5 text-blue-700" />
                     <span>{t.modalEmail}</span>
                   </label>
                   <input
@@ -172,7 +172,7 @@ export default function VolunteerFeedbackModal({
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="e.g. mansi@mastercard.com"
-                    className="w-full px-4 py-2.5 rounded-2xl border border-slate-200 bg-white text-xs font-semibold text-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-600/30 focus:border-emerald-600"
+                    className="w-full px-4 py-2.5 rounded-2xl border border-slate-200 bg-white text-xs font-semibold text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-600/30 focus:border-blue-600"
                     required
                   />
                 </div>
@@ -181,13 +181,13 @@ export default function VolunteerFeedbackModal({
               {/* Corporate Partner Company */}
               <div className="space-y-1.5">
                 <label className="text-xs font-bold text-slate-700 flex items-center gap-1">
-                  <Building2 className="w-3.5 h-3.5 text-emerald-700" />
+                  <Building2 className="w-3.5 h-3.5 text-blue-700" />
                   <span>{t.modalCompany}</span>
                 </label>
                 <select
                   value={company}
                   onChange={(e) => setCompany(e.target.value)}
-                  className="w-full px-4 py-2.5 rounded-2xl border border-slate-200 bg-white text-xs font-semibold text-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-600/30 focus:border-emerald-600"
+                  className="w-full px-4 py-2.5 rounded-2xl border border-slate-200 bg-white text-xs font-semibold text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-600/30 focus:border-blue-600"
                 >
                   <option value="Mastercard">Mastercard India</option>
                   <option value="Barclays">Barclays Global Service Center</option>
@@ -235,7 +235,7 @@ export default function VolunteerFeedbackModal({
               {/* Primary Feedback Theme */}
               <div className="space-y-1.5">
                 <label className="text-xs font-bold text-slate-700 flex items-center gap-1">
-                  <Tag className="w-3.5 h-3.5 text-emerald-700" />
+                  <Tag className="w-3.5 h-3.5 text-blue-700" />
                   <span>{t.modalTheme}</span>
                 </label>
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
@@ -246,7 +246,7 @@ export default function VolunteerFeedbackModal({
                       onClick={() => setSelectedTheme(th.id)}
                       className={`px-3 py-2 rounded-xl text-[11px] font-bold border transition-all text-left ${
                         selectedTheme === th.id
-                          ? 'bg-[#153e2e] text-white border-[#153e2e] shadow-sm'
+                          ? 'bg-[#0f2b5c] text-white border-[#0f2b5c] shadow-sm'
                           : 'bg-slate-50 text-slate-600 border-slate-200 hover:bg-slate-100'
                       }`}
                     >
@@ -259,7 +259,7 @@ export default function VolunteerFeedbackModal({
               {/* Comments & Suggestions */}
               <div className="space-y-1.5">
                 <label className="text-xs font-bold text-slate-700 flex items-center gap-1">
-                  <MessageSquare className="w-3.5 h-3.5 text-emerald-700" />
+                  <MessageSquare className="w-3.5 h-3.5 text-blue-700" />
                   <span>{t.modalComments}</span>
                 </label>
                 <textarea
@@ -267,7 +267,7 @@ export default function VolunteerFeedbackModal({
                   onChange={(e) => setComments(e.target.value)}
                   placeholder="e.g. Assembling 500 kits directly for Zilla Parishad school kids was deeply rewarding..."
                   rows={2}
-                  className="w-full px-4 py-2.5 rounded-2xl border border-slate-200 bg-white text-xs text-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-600/30 focus:border-emerald-600"
+                  className="w-full px-4 py-2.5 rounded-2xl border border-slate-200 bg-white text-xs text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-600/30 focus:border-blue-600"
                   required
                 />
               </div>
@@ -282,7 +282,7 @@ export default function VolunteerFeedbackModal({
                   onChange={(e) => setSuggestions(e.target.value)}
                   placeholder="e.g. We could add a 15-minute briefing video before starting the packaging line..."
                   rows={2}
-                  className="w-full px-4 py-2.5 rounded-2xl border border-slate-200 bg-white text-xs text-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-600/30 focus:border-emerald-600"
+                  className="w-full px-4 py-2.5 rounded-2xl border border-slate-200 bg-white text-xs text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-600/30 focus:border-blue-600"
                 />
               </div>
 
@@ -290,13 +290,13 @@ export default function VolunteerFeedbackModal({
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full py-4 rounded-2xl bg-[#153e2e] hover:bg-[#0e2c20] active:bg-[#081a13] text-white font-black text-sm shadow-xl shadow-emerald-950/20 transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
+                className="w-full py-4 rounded-2xl bg-[#0f2b5c] hover:bg-[#091b3b] active:bg-[#061226] text-white font-black text-sm shadow-xl shadow-blue-950/20 transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
               >
                 {isSubmitting ? (
                   <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
                 ) : (
                   <>
-                    <Sparkles className="w-4 h-4 text-amber-300" />
+                    <Sparkles className="w-4 h-4 text-sky-300" />
                     <span>{t.modalSubmitBtn}</span>
                   </>
                 )}
@@ -305,7 +305,7 @@ export default function VolunteerFeedbackModal({
           ) : (
             /* Confirmation Pass Card */
             <div className="text-center space-y-6 py-4">
-              <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center mx-auto shadow-inner animate-bounce">
+              <div className="w-16 h-16 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center mx-auto shadow-inner animate-bounce">
                 <CheckCircle2 className="w-10 h-10" />
               </div>
 
@@ -322,8 +322,8 @@ export default function VolunteerFeedbackModal({
               <div className="p-6 rounded-3xl bg-slate-950 text-white text-left font-mono border border-slate-800 shadow-2xl relative overflow-hidden space-y-3">
                 <div className="flex items-center justify-between border-b border-white/10 pb-3">
                   <div className="flex items-center gap-2">
-                    <Award className="w-5 h-5 text-amber-400" />
-                    <span className="text-xs font-bold text-amber-300">
+                    <Award className="w-5 h-5 text-sky-400" />
+                    <span className="text-xs font-bold text-sky-300">
                       SEVASAHAYOG VOLUNTEER PASS
                     </span>
                   </div>
@@ -339,7 +339,7 @@ export default function VolunteerFeedbackModal({
                   </div>
                   <div>
                     <span className="text-slate-400 text-[10px] block">Corporate Partner:</span>
-                    <strong className="text-emerald-400 font-sans text-sm">{company}</strong>
+                    <strong className="text-sky-400 font-sans text-sm">{company}</strong>
                   </div>
                   <div>
                     <span className="text-slate-400 text-[10px] block">Activity Code:</span>
@@ -353,14 +353,14 @@ export default function VolunteerFeedbackModal({
 
                 <div className="pt-3 border-t border-white/10 flex items-center justify-between text-[10px] text-slate-400 font-sans">
                   <span>Verified CSR Volunteering Contribution</span>
-                  <span className="text-emerald-400 font-bold">100% Validated</span>
+                  <span className="text-sky-400 font-bold">100% Validated</span>
                 </div>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-3 pt-2">
                 <button
                   onClick={handleReset}
-                  className="flex-1 py-3.5 rounded-2xl bg-[#153e2e] text-white font-bold text-xs shadow-lg hover:bg-[#0e2c20] transition-colors"
+                  className="flex-1 py-3.5 rounded-2xl bg-[#0f2b5c] text-white font-bold text-xs shadow-lg hover:bg-[#091b3b] transition-colors"
                 >
                   {t.modalCloseBtn}
                 </button>

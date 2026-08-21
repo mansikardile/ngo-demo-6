@@ -111,12 +111,12 @@ export default function SevaSahayogLandingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-8 h-20 flex items-center justify-between gap-4">
           {/* Brand Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-11 h-11 rounded-2xl bg-[#153e2e] text-white flex items-center justify-center font-black text-lg shadow-md group-hover:scale-105 transition-transform">
-              <Heart className="w-6 h-6 text-amber-300 fill-amber-300" />
+            <div className="w-11 h-11 rounded-2xl bg-[#0f2b5c] text-white flex items-center justify-center font-black text-lg shadow-md group-hover:scale-105 transition-transform">
+              <Heart className="w-6 h-6 text-sky-300 fill-sky-300" />
             </div>
             <div>
               <span className="text-xl font-black text-slate-900 tracking-tight leading-none block">
-                SevaSahayog<span className="text-[#ea580c]">.</span>
+                SevaSahayog<span className="text-blue-600">.</span>
               </span>
               <span className="text-[10px] font-bold text-slate-500 uppercase tracking-wider block mt-0.5">
                 Volunteer Experience Platform
@@ -126,20 +126,20 @@ export default function SevaSahayogLandingPage() {
 
           {/* Desktop Navigation Links */}
           <nav className="hidden lg:flex items-center gap-7 text-xs font-bold text-slate-700">
-            <Link href="#initiatives" className="hover:text-emerald-800 transition-colors">
+            <Link href="#initiatives" className="hover:text-blue-700 transition-colors">
               {t.verticalsPill}
             </Link>
-            <Link href="#calendar" className="hover:text-emerald-800 transition-colors">
+            <Link href="#calendar" className="hover:text-blue-700 transition-colors">
               {t.navActivities}
             </Link>
-            <Link href="#insights" className="hover:text-emerald-800 transition-colors">
+            <Link href="#insights" className="hover:text-blue-700 transition-colors">
               {t.navThemes}
             </Link>
             <Link
               href="/login"
-              className="hover:text-emerald-800 transition-colors flex items-center gap-1.5"
+              className="hover:text-blue-700 transition-colors flex items-center gap-1.5"
             >
-              <Building2 className="w-3.5 h-3.5 text-[#ea580c]" />
+              <Building2 className="w-3.5 h-3.5 text-blue-600" />
               <span>{t.navCorporate}</span>
             </Link>
             <a
@@ -158,9 +158,9 @@ export default function SevaSahayogLandingPage() {
 
             <button
               onClick={() => handleOpenFeedbackWithCode('SEVA-PUNE-KIT-01')}
-              className="px-4 sm:px-6 py-2.5 rounded-full bg-[#153e2e] hover:bg-[#0e2c20] active:bg-[#081a13] text-white text-xs font-bold shadow-md hover:shadow-lg transition-all flex items-center gap-2 cursor-pointer hover-lift"
+              className="px-4 sm:px-6 py-2.5 rounded-full bg-[#0f2b5c] hover:bg-[#091b3b] active:bg-[#061226] text-white text-xs font-bold shadow-md hover:shadow-lg transition-all flex items-center gap-2 cursor-pointer hover-lift"
             >
-              <Sparkles className="w-3.5 h-3.5 text-amber-300" />
+              <Sparkles className="w-3.5 h-3.5 text-sky-300" />
               <span className="hidden sm:inline">{t.heroBtnFeedback}</span>
               <span className="sm:hidden">Feedback</span>
             </button>
@@ -209,9 +209,9 @@ export default function SevaSahayogLandingPage() {
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 pt-1">
               <button
                 onClick={() => handleOpenFeedbackWithCode('SEVA-PUNE-KIT-01')}
-                className="px-8 py-4 bg-[#153e2e] hover:bg-[#0e2c20] active:bg-[#081a13] text-white font-bold text-sm rounded-full shadow-xl shadow-emerald-950/20 hover:shadow-2xl transition-all flex items-center justify-center gap-2.5 hover-lift cursor-pointer"
+                className="px-8 py-4 bg-[#0f2b5c] hover:bg-[#091b3b] active:bg-[#061226] text-white font-bold text-sm rounded-full shadow-xl shadow-blue-950/20 hover:shadow-2xl transition-all flex items-center justify-center gap-2.5 hover-lift cursor-pointer"
               >
-                <Sparkles className="w-4 h-4 text-amber-300" />
+                <Sparkles className="w-4 h-4 text-sky-300" />
                 <span>{t.heroBtnFeedback}</span>
               </button>
 
@@ -219,7 +219,7 @@ export default function SevaSahayogLandingPage() {
                 href="/login"
                 className="px-8 py-4 bg-white hover:bg-slate-50 border border-slate-300/90 text-slate-800 font-bold text-sm rounded-full shadow-sm hover:shadow-md transition-all flex items-center justify-center gap-2.5 hover-lift cursor-pointer"
               >
-                <Building2 className="w-4 h-4 text-[#ea580c]" />
+                <Building2 className="w-4 h-4 text-blue-600" />
                 <span>{t.heroBtnSpoc}</span>
                 <ArrowRight className="w-3.5 h-3.5 text-slate-400" />
               </Link>
@@ -272,8 +272,8 @@ export default function SevaSahayogLandingPage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-8 -mt-8 relative z-20">
         <div className="p-6 sm:p-8 rounded-3xl bg-white border border-slate-200/90 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="space-y-1 text-center md:text-left">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 text-amber-800 text-[11px] font-bold">
-              <Sparkles className="w-3.5 h-3.5 text-amber-600" />
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 text-blue-800 text-[11px] font-bold">
+              <Sparkles className="w-3.5 h-3.5 text-blue-600" />
               <span>Fast Track Volunteer Voice</span>
             </div>
             <h3 className="text-lg sm:text-xl font-extrabold text-slate-900">
@@ -292,12 +292,12 @@ export default function SevaSahayogLandingPage() {
                 value={quickActivityCode}
                 onChange={(e) => setQuickActivityCode(e.target.value)}
                 placeholder={t.quickActivityCodePlaceholder}
-                className="w-full pl-10 pr-4 py-3 rounded-2xl border border-slate-200 bg-slate-50 text-xs font-semibold text-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-600/30 focus:border-emerald-600"
+                className="w-full pl-10 pr-4 py-3 rounded-2xl border border-slate-200 bg-slate-50 text-xs font-semibold text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-600/30 focus:border-blue-600"
               />
             </div>
             <button
               type="submit"
-              className="px-6 py-3 rounded-2xl bg-[#153e2e] hover:bg-[#0e2c20] text-white text-xs font-bold shadow-md transition-colors shrink-0 cursor-pointer"
+              className="px-6 py-3 rounded-2xl bg-[#0f2b5c] hover:bg-[#091b3b] text-white text-xs font-bold shadow-md transition-colors shrink-0 cursor-pointer"
             >
               {t.quickBtnStart}
             </button>
@@ -308,8 +308,8 @@ export default function SevaSahayogLandingPage() {
       {/* 4. VOLUNTEERING VERTICALS (Interactive 3D Cards) */}
       <section id="initiatives" className="max-w-7xl mx-auto px-4 sm:px-8 py-24 w-full">
         <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 text-xs font-bold">
-            <Award className="w-3.5 h-3.5 text-emerald-600" />
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-blue-800 text-xs font-bold">
+            <Award className="w-3.5 h-3.5 text-blue-600" />
             <span>{t.verticalsPill}</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
@@ -332,7 +332,7 @@ export default function SevaSahayogLandingPage() {
                 />
                 <div
                   style={{ transform: 'translateZ(30px)' }}
-                  className="absolute top-3 left-3 px-3 py-1.5 rounded-full bg-emerald-600 text-white text-[10px] font-extrabold shadow-lg [transform-style:preserve-3d]"
+                  className="absolute top-3 left-3 px-3 py-1.5 rounded-full bg-blue-600 text-white text-[10px] font-extrabold shadow-lg [transform-style:preserve-3d]"
                 >
                   {t.v1Tag}
                 </div>
@@ -359,7 +359,7 @@ export default function SevaSahayogLandingPage() {
                 />
                 <div
                   style={{ transform: 'translateZ(30px)' }}
-                  className="absolute top-3 left-3 px-3 py-1.5 rounded-full bg-[#ea580c] text-white text-[10px] font-extrabold shadow-lg [transform-style:preserve-3d]"
+                  className="absolute top-3 left-3 px-3 py-1.5 rounded-full bg-indigo-600 text-white text-[10px] font-extrabold shadow-lg [transform-style:preserve-3d]"
                 >
                   {t.v2Tag}
                 </div>
@@ -386,7 +386,7 @@ export default function SevaSahayogLandingPage() {
                 />
                 <div
                   style={{ transform: 'translateZ(30px)' }}
-                  className="absolute top-3 left-3 px-3 py-1.5 rounded-full bg-teal-600 text-white text-[10px] font-extrabold shadow-lg [transform-style:preserve-3d]"
+                  className="absolute top-3 left-3 px-3 py-1.5 rounded-full bg-sky-600 text-white text-[10px] font-extrabold shadow-lg [transform-style:preserve-3d]"
                 >
                   {t.v3Tag}
                 </div>
@@ -414,8 +414,8 @@ export default function SevaSahayogLandingPage() {
         <div className="max-w-7xl mx-auto space-y-12">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <div>
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold mb-2">
-                <Calendar className="w-3.5 h-3.5 text-emerald-700" />
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-100 text-blue-800 text-xs font-bold mb-2">
+                <Calendar className="w-3.5 h-3.5 text-blue-700" />
                 <span>{t.activitiesPill}</span>
               </div>
               <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
@@ -430,7 +430,7 @@ export default function SevaSahayogLandingPage() {
               href="/login"
               className="px-5 py-2.5 rounded-full bg-white border border-slate-200 text-xs font-bold text-slate-700 hover:bg-slate-50 shadow-sm flex items-center gap-2"
             >
-              <Building2 className="w-3.5 h-3.5 text-[#ea580c]" />
+              <Building2 className="w-3.5 h-3.5 text-blue-600" />
               <span>SPOC Activity Portal</span>
             </Link>
           </div>
@@ -448,7 +448,7 @@ export default function SevaSahayogLandingPage() {
                       <span className="px-3 py-1 rounded-full bg-slate-100 text-slate-700 font-mono text-[11px] font-bold border border-slate-200">
                         {act.id}
                       </span>
-                      <span className="px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-[10px] font-extrabold border border-emerald-200">
+                      <span className="px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-[10px] font-extrabold border border-blue-200">
                         {act.status}
                       </span>
                     </div>
@@ -461,7 +461,7 @@ export default function SevaSahayogLandingPage() {
                         <h3 className="text-base font-extrabold text-slate-900 leading-snug">
                           {act.title}
                         </h3>
-                        <p className="text-xs font-semibold text-[#ea580c] mt-0.5">
+                        <p className="text-xs font-semibold text-blue-600 mt-0.5">
                           {act.partner}
                         </p>
                       </div>
@@ -482,9 +482,9 @@ export default function SevaSahayogLandingPage() {
                   <div className="pt-2">
                     <button
                       onClick={() => handleOpenFeedbackWithCode(act.id)}
-                      className="w-full py-3 rounded-2xl bg-[#153e2e] hover:bg-[#0e2c20] text-white text-xs font-bold shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer"
+                      className="w-full py-3 rounded-2xl bg-[#0f2b5c] hover:bg-[#091b3b] text-white text-xs font-bold shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer"
                     >
-                      <Sparkles className="w-3.5 h-3.5 text-amber-300" />
+                      <Sparkles className="w-3.5 h-3.5 text-sky-300" />
                       <span>{t.actSubmitFeedback}</span>
                     </button>
                   </div>
@@ -497,16 +497,16 @@ export default function SevaSahayogLandingPage() {
 
       {/* 7. CORPORATE PARTNERSHIP CSR OUTCOMES */}
       <section className="py-24 px-4 sm:px-8 max-w-7xl mx-auto w-full">
-        <div className="p-8 sm:p-12 rounded-[36px] bg-gradient-to-r from-[#153e2e] via-emerald-950 to-[#0e2c20] text-white border border-emerald-800/40 shadow-2xl relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8">
+        <div className="p-8 sm:p-12 rounded-[36px] bg-gradient-to-r from-[#0f2b5c] via-blue-950 to-[#091b3b] text-white border border-blue-800/40 shadow-2xl relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="space-y-4 max-w-xl relative z-10">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-emerald-200 text-xs font-bold border border-white/10">
-              <Building2 className="w-3.5 h-3.5 text-amber-300" />
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-sky-200 text-xs font-bold border border-white/10">
+              <Building2 className="w-3.5 h-3.5 text-sky-300" />
               <span>For Corporate CSR &amp; HR Leaders</span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-black text-white leading-tight">
               Ready to Accelerate Corporate Volunteering with Evidence-Backed Insights?
             </h2>
-            <p className="text-xs sm:text-sm text-emerald-100/90 leading-relaxed">
+            <p className="text-xs sm:text-sm text-sky-100/90 leading-relaxed">
               Access real-time activity dashboards, sentiment telemetry, and ready-to-share CSR impact reports for your leadership.
             </p>
           </div>
@@ -514,7 +514,7 @@ export default function SevaSahayogLandingPage() {
           <div className="flex flex-col sm:flex-row items-center gap-3.5 relative z-10 shrink-0 w-full md:w-auto">
             <Link
               href="/login"
-              className="w-full sm:w-auto px-8 py-4 rounded-full bg-white text-[#153e2e] font-black text-xs hover:bg-slate-100 shadow-xl transition-all text-center"
+              className="w-full sm:w-auto px-8 py-4 rounded-full bg-white text-[#0f2b5c] font-black text-xs hover:bg-slate-100 shadow-xl transition-all text-center"
             >
               Access Corporate SPOC Portal
             </Link>
@@ -533,8 +533,8 @@ export default function SevaSahayogLandingPage() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 pb-12 border-b border-slate-800">
           <div className="md:col-span-6 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-2xl bg-emerald-600 text-white flex items-center justify-center font-black text-lg">
-                <Heart className="w-5 h-5 text-amber-300 fill-amber-300" />
+              <div className="w-10 h-10 rounded-2xl bg-blue-600 text-white flex items-center justify-center font-black text-lg">
+                <Heart className="w-5 h-5 text-sky-300 fill-sky-300" />
               </div>
               <span className="text-xl font-black text-white tracking-tight">
                 SevaSahayog Foundation

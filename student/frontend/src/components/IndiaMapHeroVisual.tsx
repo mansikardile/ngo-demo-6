@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useRef, useState, useCallback } from 'react';
-import { Award, Laptop, Sparkles } from 'lucide-react';
+import { Award, HeartHandshake, Sparkles, Building2 } from 'lucide-react';
 
 export default function IndiaMapHeroVisual() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -54,35 +54,35 @@ export default function IndiaMapHeroVisual() {
       {/* Ambient background decorative dots / confetti with 3D depth */}
       <div
         style={{ transform: 'translateZ(60px)' }}
-        className="absolute top-2 left-6 w-3.5 h-3.5 rounded-full bg-[#ea580c] shadow-lg animate-bounce duration-1000 [transform-style:preserve-3d]"
+        className="absolute top-2 left-6 w-3.5 h-3.5 rounded-full bg-blue-600 shadow-lg animate-bounce duration-1000 [transform-style:preserve-3d]"
       />
       <div
         style={{ transform: 'translateZ(40px)' }}
-        className="absolute top-1/4 -left-3 w-2.5 h-2.5 rounded-full bg-emerald-500 shadow-md [transform-style:preserve-3d]"
+        className="absolute top-1/4 -left-3 w-2.5 h-2.5 rounded-full bg-sky-500 shadow-md [transform-style:preserve-3d]"
       />
       <div
         style={{ transform: 'translateZ(50px)' }}
-        className="absolute bottom-16 left-8 w-3.5 h-3.5 rounded-full bg-sky-500 shadow-md animate-pulse [transform-style:preserve-3d]"
+        className="absolute bottom-16 left-8 w-3.5 h-3.5 rounded-full bg-indigo-500 shadow-md animate-pulse [transform-style:preserve-3d]"
       />
       <div
         style={{ transform: 'translateZ(45px)' }}
-        className="absolute top-8 right-2 w-3 h-3 rounded-full bg-rose-500 shadow-md animate-bounce [transform-style:preserve-3d]"
+        className="absolute top-8 right-2 w-3 h-3 rounded-full bg-blue-400 shadow-md animate-bounce [transform-style:preserve-3d]"
       />
       <div
         style={{ transform: 'translateZ(35px)' }}
-        className="absolute bottom-24 -right-3 w-2.5 h-2.5 rounded-full bg-indigo-500 shadow-md [transform-style:preserve-3d]"
+        className="absolute bottom-24 -right-3 w-2.5 h-2.5 rounded-full bg-cyan-400 shadow-md [transform-style:preserve-3d]"
       />
       <div
         style={{ transform: 'translateZ(55px)' }}
-        className="absolute top-1/2 -right-4 w-4 h-4 rounded-full bg-amber-400 shadow-md [transform-style:preserve-3d]"
+        className="absolute top-1/2 -right-4 w-4 h-4 rounded-full bg-sky-300 shadow-md [transform-style:preserve-3d]"
       />
       <div
         style={{ transform: 'translateZ(30px)' }}
-        className="absolute bottom-4 right-16 w-3 h-3 rounded-full bg-emerald-400 shadow-md animate-pulse [transform-style:preserve-3d]"
+        className="absolute bottom-4 right-16 w-3 h-3 rounded-full bg-blue-500 shadow-md animate-pulse [transform-style:preserve-3d]"
       />
 
-      {/* Subtle Glow Behind India Map */}
-      <div className="absolute inset-0 bg-gradient-to-tr from-amber-200/30 via-emerald-200/20 to-indigo-200/20 rounded-full blur-3xl -z-10 pointer-events-none" />
+      {/* Subtle Glow Behind India Map in Blue / Cyan */}
+      <div className="absolute inset-0 bg-gradient-to-tr from-blue-200/30 via-sky-200/25 to-indigo-200/25 rounded-full blur-3xl -z-10 pointer-events-none" />
 
       {/* Dynamic 3D Glare Light */}
       <div
@@ -100,39 +100,39 @@ export default function IndiaMapHeroVisual() {
       >
         <img
           src="/images/india_scholars_clean_map.png"
-          alt="Katalyst Indian STEM Scholars inside India Map"
+          alt="SevaSahayog Volunteers inside India Map"
           className="w-full h-full object-contain transition-transform duration-500"
         />
       </div>
 
-      {/* 3D Floating Badge 1: 100% Free Laptops (Pops Out in 3D Space) */}
+      {/* 3D Floating Badge 1: 35+ Monthly Drives (Pops Out in 3D Space) */}
       <div
         style={{ transform: 'translateZ(70px)' }}
-        className="absolute top-4 -left-2 sm:-left-6 p-4 rounded-2xl bg-white/95 backdrop-blur-md border border-slate-200/90 shadow-[0_15px_35px_-5px_rgba(0,0,0,0.15)] max-w-[210px] z-30 transition-transform duration-300 hover:scale-105 [transform-style:preserve-3d]"
+        className="absolute top-4 -left-2 sm:-left-6 p-4 rounded-2xl bg-white/95 backdrop-blur-md border border-slate-200/90 shadow-[0_15px_35px_-5px_rgba(0,0,0,0.15)] max-w-[215px] z-30 transition-transform duration-300 hover:scale-105 [transform-style:preserve-3d]"
       >
         <div className="flex items-center gap-2.5">
-          <div className="w-8 h-8 rounded-xl bg-emerald-700 text-white flex items-center justify-center font-bold text-xs shrink-0 shadow-md">
-            <Laptop className="w-4 h-4 text-white" />
+          <div className="w-8 h-8 rounded-xl bg-[#0f2b5c] text-white flex items-center justify-center font-bold text-xs shrink-0 shadow-md">
+            <HeartHandshake className="w-4 h-4 text-sky-300" />
           </div>
           <div>
-            <p className="text-[11px] font-black text-slate-900 leading-tight">100% Free Laptops</p>
-            <p className="text-[9px] text-slate-500 font-medium">Brand-new coding devices</p>
+            <p className="text-[11px] font-black text-slate-900 leading-tight">35+ Monthly Drives</p>
+            <p className="text-[9px] text-slate-500 font-medium">Schools, Tribal &amp; Green</p>
           </div>
         </div>
       </div>
 
-      {/* 3D Floating Badge 2: 4,500+ Scholars (Pops Out in 3D Space) */}
+      {/* 3D Floating Badge 2: 25,000+ Volunteers (Pops Out in 3D Space) */}
       <div
         style={{ transform: 'translateZ(65px)' }}
-        className="absolute bottom-6 -right-2 sm:-right-4 p-4 rounded-2xl bg-white/95 backdrop-blur-md border border-slate-200/90 shadow-[0_15px_35px_-5px_rgba(0,0,0,0.15)] max-w-[220px] z-30 transition-transform duration-300 hover:scale-105 [transform-style:preserve-3d]"
+        className="absolute bottom-6 -right-2 sm:-right-4 p-4 rounded-2xl bg-white/95 backdrop-blur-md border border-slate-200/90 shadow-[0_15px_35px_-5px_rgba(0,0,0,0.15)] max-w-[225px] z-30 transition-transform duration-300 hover:scale-105 [transform-style:preserve-3d]"
       >
         <div className="flex items-center gap-2.5">
-          <div className="w-8 h-8 rounded-xl bg-[#ea580c] text-white flex items-center justify-center font-bold text-xs shrink-0 shadow-md">
+          <div className="w-8 h-8 rounded-xl bg-blue-600 text-white flex items-center justify-center font-bold text-xs shrink-0 shadow-md">
             <Award className="w-4 h-4 text-white" />
           </div>
           <div>
-            <p className="text-[11px] font-black text-slate-900 leading-tight">4,500+ STEM Scholars</p>
-            <p className="text-[9px] text-slate-500 font-medium">Pan-India Fellowship reach</p>
+            <p className="text-[11px] font-black text-slate-900 leading-tight">25,000+ Volunteers</p>
+            <p className="text-[9px] text-slate-500 font-medium">Pan-Maharashtra CSR Impact</p>
           </div>
         </div>
       </div>
