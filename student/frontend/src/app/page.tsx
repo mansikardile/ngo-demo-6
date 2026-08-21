@@ -10,6 +10,7 @@ import ScrollReveal from '@/components/ScrollReveal';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 import DigitalSignaturePad from '@/components/DigitalSignaturePad';
 import IndiaMapHeroVisual from '@/components/IndiaMapHeroVisual';
+import Spline3DExperience from '@/components/Spline3DExperience';
 import { Language, translations } from '@/lib/translations';
 import {
   getOfflineQueue,
@@ -694,6 +695,9 @@ export default function StudentLandingPage() {
           </ScrollReveal>
         </div>
       </section>
+
+      {/* 4.5. INTERACTIVE 3D SPATIAL SANDBOX (Spline 3D) */}
+      <Spline3DExperience />
 
       {/* 5. CAMPUS DRIVES */}
       <section id="sessions" className="bg-slate-100/70 border-y border-slate-200/80 py-24 px-4 sm:px-8 w-full">
