@@ -11,6 +11,7 @@ import LanguageSwitcher from '@/components/LanguageSwitcher';
 import DigitalSignaturePad from '@/components/DigitalSignaturePad';
 import IndiaMapHeroVisual from '@/components/IndiaMapHeroVisual';
 import Interactive3DCard from '@/components/Interactive3DCard';
+import IntelligenceMatrixBento from '@/components/IntelligenceMatrixBento';
 import { Language, translations } from '@/lib/translations';
 import {
   getOfflineQueue,
@@ -710,6 +711,9 @@ export default function StudentLandingPage() {
           </ScrollReveal>
         </div>
       </section>
+
+      {/* 4.5. REAL-TIME INTELLIGENCE & IMPACT GRID (LP Intelligence Bento Style) */}
+      <IntelligenceMatrixBento />
 
       {/* 5. CAMPUS DRIVES */}
       <section id="sessions" className="bg-slate-100/70 border-y border-slate-200/80 py-24 px-4 sm:px-8 w-full">
